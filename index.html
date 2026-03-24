@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Auth Overlay -->
+    <div id="auth-overlay" class="overlay hidden">
+        <div class="modal">
+            <h2 id="auth-title">Login</h2>
+            <div id="login-form" class="form-container">
+                <input type="email" id="login-email" placeholder="Email" autocomplete="off">
+                <input type="password" id="login-pass" placeholder="Password">
+                <button onclick="handleLogin()">Sign In</button>
+                <p>New user? <a href="#" onclick="showSignup()">Create account</a></p>
+                <button class="secondary" onclick="guestMode()">Continue as Guest</button>
+            </div>
+            <div id="signup-form" class="form-container hidden">
+                <input type="text" id="signup-name" placeholder="Full Name">
+                <input type="email" id="signup-email" placeholder="Email">
+                <input type="password" id="signup-pass" placeholder="Password">
+                <input type="text" id="signup-address" placeholder="Delivery Address">
+                <button onclick="handleSignup()">Sign Up</button>
+                <p>Have an account? <a href="#" onclick="showLogin()">Back to Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="main-app">
+        <header id="nav-header">
+            <div class="brand">ShopMate AI</div>
+            <nav id="top-nav">
+                <button id="btn-ai" onclick="switchTab('ai')">AI Assistant</button>
+                <button id="btn-products" onclick="switchTab('products')">Products</button>
+                <button id="btn-orders" onclick="switchTab('orders')">Orders</button>
+                <button id="btn-coupons" onclick="switchTab('coupons')">Coupons</button>
+                <button id="btn-guest" class="hidden" onclick="showAuth()">Login / Register</button>
+                <button id="btn-logout" class="hidden" onclick="logout()">Logout</button>
+            </nav>
+            <div id="user-status">Guest Mode</div>
+        </header>
+
+        <main id="content-area">
+            <!-- AI Section -->
+            <section id="tab-ai" class="tab-content">
+                <div id="chat-messages">
+                    <div class="message system">How can I help you today? You can guest-browse products or login for full access.</div>
+                </div>
+                <form id="chat-input-area">
+                    <input type="text" id="user-input" placeholder="Type message..." autocomplete="off">
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+
+            <!-- Products Section -->
+            <section id="tab-products" class="tab-content hidden">
+                <div id="products-list" class="grid-container">
+                    <!-- Products rendered via JS -->
+                </div>
+            </section>
+
+            <!-- Orders Section -->
+            <section id="tab-orders" class="tab-content hidden">
+                <div id="order-history" class="list-container">
+                    <p>Please login to view order history.</p>
+                </div>
+            </section>
+
+            <!-- Coupons Section -->
+            <section id="tab-coupons" class="tab-content hidden">
+                <div id="coupons-list" class="list-container">
+                    <!-- Coupons rendered via JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

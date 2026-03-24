@@ -1,0 +1,63 @@
+/* Global Styles Cleanup */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #000; color: #fff; height: 100vh; display: flex; flex-direction: column; }
+
+/* Header & Nav */
+#nav-header { background: #111; padding: 1rem 2rem; display: flex; align-items: center; border-bottom: 1px solid #222; }
+.brand { font-weight: 600; font-size: 1.1rem; margin-right: 2rem; }
+#top-nav { display: flex; gap: 1.2rem; flex: 1; }
+#top-nav button { background: none; border: none; color: #777; font-size: 0.85rem; cursor: pointer; transition: color 0.2s; }
+#top-nav button.active, #top-nav button:hover { color: #fff; }
+#user-status { font-size: 0.75rem; color: #444; }
+
+/* Overlay & Modals */
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 1000; display: flex; align-items: center; justify-content: center; }
+.modal { background: #111; border: 1px solid #333; padding: 1.5rem 2rem; border-radius: 8px; width: 350px; }
+#auth-title { margin-bottom: 1rem; font-weight: 400; font-size: 1.1rem; text-align: center; color: #aaa; }
+.form-container { display: flex; flex-direction: column; gap: 0.8rem; }
+input { background: #222; border: 1px solid #444; padding: 0.6rem 1rem; color: #fff; border-radius: 4px; outline: none; }
+button { background: #fff; color: #000; border: none; padding: 0.7rem; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 0.9rem; }
+button.secondary { background: none; color: #666; font-weight: 400; }
+
+/* Main Content Area */
+#content-area { flex: 1; padding: 2rem; overflow-y: auto; }
+.tab-content { display: flex; flex-direction: column; height: 100%; }
+.hidden { display: none !important; }
+
+/* Chat Bubbles */
+#chat-messages { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 1.2rem; padding-bottom: 1rem; }
+.message { max-width: 85%; padding: 1rem 1.4rem; border-radius: 8px; font-size: 0.9rem; border: 1px solid #222; }
+.message.user { align-self: flex-end; background: #fff; color: #000; }
+.message.ai { align-self: flex-start; background: #222; color: #fff; border: 1px solid #333; }
+.message.system { color: #555; font-style: italic; border: none; }
+#chat-input-area { display: flex; gap: 1rem; padding: 1rem 0; border-top: 1px solid #222; }
+#chat-input-area input { flex: 1; }
+
+/* Grid & Cards (Products) */
+.grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
+.card { background: #111; border: 1px solid #333; padding: 1.5rem; border-radius: 8px; display: flex; flex-direction: column; gap: 1rem; }
+.card p { font-size: 0.8rem; color: #777; }
+.card .price { font-weight: 600; font-size: 1.1rem; }
+
+/* List Items (Coupons & Orders) */
+.list-container { display: flex; flex-direction: column; gap: 1rem; }
+.list-item { background: #111; border: 1px solid #333; padding: 1.2rem; border-radius: 8px; font-size: 0.9rem; }
+.clickable-coupon { cursor: pointer; transition: background 0.2s; }
+.clickable-coupon:hover { background: #222; }
+
+/* Order Items Special Styling */
+.order-item { display: flex; justify-content: space-between; align-items: center; }
+.order-info { flex: 1; }
+.order-actions { display: flex; gap: 0.5rem; }
+
+/* Action Tag Buttons (Mini) */
+button.mini { background: #222; color: #888; border: 1px solid #444; padding: 0.3rem 0.6rem; font-size: 0.7rem; font-weight: 400; }
+button.mini:hover { color: #fff; border-color: #aaa; }
+
+/* Status Tags */
+.status-tag { margin-left: 1rem; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; }
+.active-green { color: #00ff7f; }
+.expired-white { color: #ffffff; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+.tab-content { animation: fadeIn 0.3s ease; }
