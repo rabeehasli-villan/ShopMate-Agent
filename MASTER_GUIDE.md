@@ -1,5 +1,7 @@
 # 🍱 ShopMate: The Master Overview & Usage Guide
 
+**🚀 Test the Agent live right now: [https://ecommerce-assistant-1089035715487.us-central1.run.app](https://ecommerce-assistant-1089035715487.us-central1.run.app)**
+
 Welcome to the definitive manual for the **ShopMate Agentic E-Commerce Platform**! 
 This project combines the power of **Gemini 2.5 Flash** with **Google Cloud Firestore**. Below, you'll find an exhaustive explanation of every feature we built, how to use them, how the Agent thinks, and how the platform is deployed.
 

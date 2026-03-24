@@ -1,5 +1,7 @@
 # 🛍️ ShopMate: Agentic AI E-Commerce Assistant
 
+**🔥 [Live Test Environment (Cloud Run)](https://ecommerce-assistant-1089035715487.us-central1.run.app) 🔥**
+
 A futuristic, high-performance E-Commerce platform powered by **Gemini 2.5 Flash** and **Google Cloud Firestore**.
 
 ## 🚀 Key Features
